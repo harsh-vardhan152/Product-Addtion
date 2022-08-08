@@ -13,8 +13,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-
-
+/**
+ * Servlet implementation class ProductDAO
+ */
 @WebServlet("/ProductDAO")
 public class ProductDAO extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -24,12 +25,12 @@ public class ProductDAO extends HttpServlet {
 			throws ServletException, IOException {
 
 		// reading form values
-		int marks = Integer.parseInt(request.getParameter("txtid"));
-		String name = request.getParameter("txtName");
+		int Price = Integer.parseInt(request.getParameter("txtPrice"));
+		String name = request.getParameter("txtname");
 		// put values in Object
 		Product stud = new Product();
-		stud.setid(marks);
-		stud.setName(name);
+		stud.setPrice(Price);
+		stud.setname(name);
 
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();

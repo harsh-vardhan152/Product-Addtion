@@ -1,32 +1,25 @@
 package com.ProductInfo;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="Product")
 public class Product {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(length=20)
+	private int id;
 	private String name;
-	@Column
-	private int Id ;
+	private int Price;
 	public int getid() {
-		return Id;
+		return id;
 	}
 	public void setid(int id) {
-		this.Id = id;
+		this.id = id;
 	}
-	public String getName() {
+	public String getname() {
 		return name;
 	}
-	public void setName(String name) {
+	public void setname(String name) {
 		this.name = name;
 	}
-	
+	public int getPrice() {
+		return Price;
+	}
+	public void setPrice(int Price) {
+		this.Price = Price;
+	}
 }

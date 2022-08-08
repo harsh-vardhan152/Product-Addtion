@@ -1,8 +1,8 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<h2>Product Additions</h2>
 
-<a href="ProductAdd.html">Product Additions</a>
+<a href="ProductAdd.html">Product Additions Form</a>
 
 </body>
 </html>
